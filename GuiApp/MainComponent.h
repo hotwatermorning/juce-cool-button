@@ -5,22 +5,7 @@
 // have called `juce_generate_juce_header(<thisTarget>)` in your CMakeLists.txt,
 // you could `#include <JuceHeader.h>` here instead, to make all your module headers visible.
 #include <juce_gui_extra/juce_gui_extra.h>
-
-struct CoolButton
-:   juce::Button
-{
-    //! constructor
-    /*! @param hue the base color of the button. (0.0 .. 1.0)
-     */
-    CoolButton(juce::String const &name, float hue);
-    
-    void paintButton (juce::Graphics &g,
-                      bool shouldDrawButtonAsHighlighted,
-                      bool shouldDrawButtonAsDown
-                      ) override;
-    
-    float hue_ = 0.0;
-};
+#include "./CoolButton.h"
 
 //==============================================================================
 /*
